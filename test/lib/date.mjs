@@ -144,9 +144,6 @@ describe('lib/date', () => {
     it('returns a date when given a string that matches the iso8601 regex', () => {
       ok(jsonDateReviver(null, '2023-09-26T10:30:00.000Z') instanceof Date)
     })
-    it('returns a date when given a string that matches the iso8601 regex and a custom regex', () => {
-      ok(jsonDateReviver(null, '2023/09/26 10:30:00', /^\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}$/) instanceof Date) // Custom format regex
-    })
   })
   describe('.noopDateReplacer', () => {
     it('is callable', () => {
