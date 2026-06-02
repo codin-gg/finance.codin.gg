@@ -4,6 +4,7 @@
   "private": true,
   "description": "This is a simple crypto project that tracks prices of crypto currencies over time and makes them available. - [ ] Bitcoin EUR USDC USDT CUSDC SAI",
   "main": "www/index.html",
+  "type": "module",
   "config": {
     "cache": "data"
   },
