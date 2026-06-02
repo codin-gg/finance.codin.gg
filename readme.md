@@ -8,22 +8,14 @@ An open-source cryptocurrency data service, with daily-updated data in multiple 
 ## Currently supported formats 📋
 - [x] CSV
 - [x] JSON
-
-Notes: Those deprecations are due to [Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#limits-on-use-of-github-pages) disk space limitations. For now, we rather'd rather like to focus on having more timeframes. btw `csv` is the least disk hungry google sheets compatible format 🚀
-
-<!--
-If: also JSON format gets dropped!
-
-Consider having https://finance.codin.gg as main project but then also link the following together.
-- [ ] https://finance-json.codin.gg
-- [ ] https://finance-xml.codin.gg
-- [ ] https://finance-jsonl.codin.gg
--->
+- [x] JSONL @deprecated
 
 ## Currently supported routes
-- [-] `/api/{interval:1d,1w,1m,1y}.{format:json,csv} → [[{ticker},{date},{open},{high},{low},{close},{volume}], ...]`
-- [-] `/api/{id}/{interval:1d,1w,1m,1y}.{format:json,csv} → [[{date},{open},{high},{low},{close},{volume}], ...]`
-- [x] `/api/{id}/{year?}/{month?}/{day?}/{interval:1d}.{format:json,csv} → [[{date},{open},{high},{low},{close},{volume}], ...]`
+- [x] `/api/{id}/{year?}/{month?}/{day?}/{interval:1d,1m,1y}.{format:json,csv} → [[{date},{open},{high},{low},{close},{volume}], ...]`
+- [x] `/api/{interval:1d,1m,1y}.{format:json,csv} → [[{ticker},{date},{open},{high},{low},{close},{volume}], ...]`
+- [x] `/api/{id}/{interval:1d,1m,1y}.{format:json,csv} → [[{date},{open},{high},{low},{close},{volume}], ...]`
+
+Note: Ticker, format, and timeframe deprecations are due to [Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#limits-on-use-of-github-pages) disk space limitations. For now, we rather'd rather focus on having a good dataset. btw `csv` is the least disk hungry google sheets compatible format 🚀
 
 ## Donations 🙏
 - **BTC:** bc1qp8v7qleltzas46h3zmsw0epflmkks5v3c3f0cq <!-- codin.x -->
