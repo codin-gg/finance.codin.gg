@@ -1,17 +1,17 @@
 openapi: 3.0.0
 info:
-  title: finance.codin.xyz
+  title: finance.codin.gg
   version: 1.0.0-beta
   description: An open-source cryptocurrency data service, with daily-updated data in multiple formats. Accessible, developer-friendly, and Google Sheets and RSS reader-friendly.
-  termsOfService: https://finance.codin.xyz/terms-of-service.html
+  termsOfService: https://finance.codin.gg/terms-of-service.html
   contact:
     email: open-source-software@codin.gg
 externalDocs:
   description: Github
-  url: https://github.com/codin-gg/finance.codin.xyz
+  url: https://github.com/codin-gg/finance.codin.gg
 servers:
   - description: Production
-    url: https://finance.codin.xyz/api
+    url: https://codin-gg.github.io/finance.codin.gg/api
   - description: Local
     url: https://127.0.0.1:3000/api
 availableTickers: &tickers
@@ -662,7 +662,7 @@ availableFormats: &formats
   - csv
   - json
 paths:
-  '/{interval}.{format}':
+  "/{interval}.{format}":
     parameters:
       - in: path
         name: interval
@@ -681,12 +681,12 @@ paths:
         - List
       summary: yields a list of available tickers and the most recent ohlcv data by interval, and format.
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json: {}
             text/csv: {}
-  '/{ticker}/{interval}.{format}':
+  "/{ticker}/{interval}.{format}":
     parameters:
       - in: path
         name: ticker
@@ -712,12 +712,12 @@ paths:
         - Full
       summary: yields ohlcv data for any valid ticker, interval, and format.
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json: {}
             text/csv: {}
-  '/{ticker}/{year}/{interval}.{format}':
+  "/{ticker}/{year}/{interval}.{format}":
     parameters:
       - in: path
         name: year
@@ -748,12 +748,12 @@ paths:
         - Partial
       summary: yields ohlcv data for any valid ticker, year, interval, and format.
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json: {}
             text/csv: {}
-  '/{ticker}/{year}/{month}/{interval}.{format}':
+  "/{ticker}/{year}/{month}/{interval}.{format}":
     parameters:
       - in: path
         name: year
@@ -789,12 +789,12 @@ paths:
         - Partial
       summary: yields ohlcv data for any valid ticker, year, month, interval, and format.
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json: {}
             text/csv: {}
-  '/{ticker}/{year}/{month}/{day}/{interval}.{format}':
+  "/{ticker}/{year}/{month}/{day}/{interval}.{format}":
     parameters:
       - in: path
         name: year
@@ -835,7 +835,7 @@ paths:
         - Partial
       summary: yields ohlcv data for any valid ticker, year, month, day, interval, and format.
       responses:
-        '200':
+        "200":
           description: Successful response
           content:
             application/json: {}
